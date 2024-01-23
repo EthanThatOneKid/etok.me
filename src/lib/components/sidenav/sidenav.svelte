@@ -32,6 +32,7 @@
 	<nav>
 		{#each data.categories as category (category.title)}
 			<h4>{category.title}</h4>
+
 			{#each category.links as link (link.content)}
 				<a href={link.href}>{link.content}</a>
 			{/each}
@@ -98,7 +99,6 @@
 	:global(body) {
 		min-block-size: 100vh;
 		font-family:
-			BLOKK,
 			system-ui,
 			-apple-system,
 			Segoe UI,
