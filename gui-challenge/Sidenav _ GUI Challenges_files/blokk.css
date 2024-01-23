@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'BLOKK';
+    src: url('https://storage.googleapis.com/atoms-sandbox.google.com.a.appspot.com/blokk/BLOKKNeue-Regular.eot');
+    src: url('https://storage.googleapis.com/atoms-sandbox.google.com.a.appspot.com/blokk/BLOKKNeue-Regular.eot?#iefix') format('embedded-opentype'),
+         url('https://storage.googleapis.com/atoms-sandbox.google.com.a.appspot.com/blokk/BLOKKNeue-Regular.woff2') format('woff2'),
+         url('https://storage.googleapis.com/atoms-sandbox.google.com.a.appspot.com/blokk/BLOKKNeue-Regular.woff') format('woff'),
+         url('https://storage.googleapis.com/atoms-sandbox.google.com.a.appspot.com/blokk/BLOKKNeue-Regular.otf') format('opentype'),
+         url('https://storage.googleapis.com/atoms-sandbox.google.com.a.appspot.com/blokk/BLOKKNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
