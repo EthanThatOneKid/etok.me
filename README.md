@@ -8,7 +8,9 @@ portfolio website.
 1\. Install the Deno toolchain:
 <https://deno.land/manual/getting_started/installation>
 
-2\. Start the project:
+2\. Clone the Git repository.
+
+3\. Start the project:
 
 ```sh
 deno task start
