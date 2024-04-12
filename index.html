@@ -10,23 +10,233 @@
         margin: 0;
       }
 
-      div {
-        background-image: url("https://images.unsplash.com/photo-1517670972079-a58c8d6c0af8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80");
-        background-size: cover;
-      }
-
       h1 {
-        background-color: transparent;
-        font-family: consolas, monospace;
-        mix-blend-mode: screen;
-        color: black;
-        font-size: 5em;
+        /* --indigo-7: #4263eb;
+        --purple-7: #ae3ec9;
+        --gray-12: #030507;
+        --gray-7: #495057;
+        --gray-0: #f8f9fa;
+        --gray-2: #e9ecef;
+        --gray-3: #dee2e6;
+        --gray-4: #ced4da;
+        --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+          Cantarell, Noto Sans, sans-serif;
+        --font-lineheight-3: 1.5;
+        --red-6: #fa5252;
+        --red-3: #ffa8a8;
+        --gray-6: #868e96;
+        --indigo-3: #91a7ff;
+        --purple-3: #e599f7;
+        --gray-1: #f1f3f5;
+        --gray-9: #212529;
+        --gray-8: #343a40;
+        --ease-2: cubic-bezier(0.25, 0, 0.4, 1);
+        --font-weight-9: 900;
+        --font-lineheight-1: 1.25;
+        --font-size-8: 3.5rem;
+        --size-header-1: 20ch;
+        --font-size-6: 2.5rem;
+        --size-header-2: 25ch;
+        --font-size-5: 2rem;
+        --font-size-4: 1.5rem;
+        --font-size-3: 1.25rem;
+        --size-header-3: 35ch;
+        --font-size-2: 1.1rem;
+        --size-1: 0.25rem;
+        --indigo-2: #bac8ff;
+        --purple-2: #eebefa;
+        --size-2: 0.5rem;
+        --radius-2: 5px;
+        --size-3: 1rem;
+        --size-10: 5rem;
+        --font-mono: Dank Mono, Operator Mono, Inconsolata, Fira Mono,
+          ui-monospace, SF Mono, Monaco, Droid Sans Mono, Source Code Pro,
+          monospace;
+        --border-size-1: 1px;
+        --size-8: 3rem;
+        --size-content-2: 45ch;
+        --size-content-3: 60ch;
+        --font-weight-7: 700;
+        --size-5: 1.5rem;
+        --font-size-0: 0.75rem;
+        --size-content-1: 20ch;
+        --border-size-2: 2px;
+        --size-fluid-5: clamp(4rem, 5vw, 5rem);
+        --font-size-1: 1rem;
+        --border-size-3: 5px;
+        --size-4: 1.25rem;
+        --red-9: #c92a2a;
+        --red-2: #ffc9c9;
+        --green-9: #2b8a3e;
+        --green-1: #d3f9d8;
+        --blue-5: #339af0;
+        --radius-3: 1rem;
+        --shadow-6: 0 -1px 2px 0 hsl(var(--shadow-color) /
+                calc(var(--shadow-strength) + 2%)),
+          0 3px 2px -2px hsl(var(--shadow-color) /
+                calc(var(--shadow-strength) + 3%)),
+          0 7px 5px -2px hsl(var(--shadow-color) /
+                calc(var(--shadow-strength) + 3%)),
+          0 12px 10px -2px hsl(var(--shadow-color) /
+                calc(var(--shadow-strength) + 4%)),
+          0 22px 18px -2px hsl(var(--shadow-color) /
+                calc(var(--shadow-strength) + 5%)),
+          0 41px 33px -2px hsl(var(--shadow-color) /
+                calc(var(--shadow-strength) + 6%)),
+          0 100px 80px -2px hsl(var(--shadow-color) /
+                calc(var(--shadow-strength) + 7%));
+        --gray-10: #16191d;
+        --gray-5: #adb5bd;
+        --layer-1: 1;
+        --font-weight-5: 500;
+        --radius-round: 1e5px;
+        --ease-elastic-1: cubic-bezier(0.5, 0.75, 0.75, 1.25);
+        --gray-11: #0d0f12;
+        --ratio-widescreen: 16/9;
+        --purple-6: #be4bdb;
+        --lime-6: #82c91e;
+        --orange-6: #fd7e14;
+        --yellow-3: #ffe066;
+        --size-6: 1.75rem;
+        --shadow-2: 0 3px 5px -2px hsl(var(--shadow-color) /
+                calc(var(--shadow-strength) + 3%)),
+          0 7px 14px -5px hsl(var(--shadow-color) /
+                calc(var(--shadow-strength) + 5%));
+        --font-weight-4: 400;
+        --font-lineheight-5: 2;
+        --size-fluid-4: clamp(2rem, 4vw, 3rem);
+        --size-7: 2rem;
+        --font-lineheight-4: 1.75;
+        --font-weight-8: 800;
+        --size-fluid-3: clamp(1.5rem, 3vw, 2rem);
+        --radius-5: 4rem;
+        --shadow-5: 0 -1px 2px 0 hsl(var(--shadow-color) /
+                calc(var(--shadow-strength) + 2%)),
+          0 2px 1px -2px hsl(var(--shadow-color) /
+                calc(var(--shadow-strength) + 3%)),
+          0 5px 5px -2px hsl(var(--shadow-color) /
+                calc(var(--shadow-strength) + 3%)),
+          0 10px 10px -2px hsl(var(--shadow-color) /
+                calc(var(--shadow-strength) + 4%)),
+          0 20px 20px -2px hsl(var(--shadow-color) /
+                calc(var(--shadow-strength) + 5%)),
+          0 40px 40px -2px hsl(var(--shadow-color) /
+                calc(var(--shadow-strength) + 7%));
+        --ratio-square: 1;
+        --ease-out-4: cubic-bezier(0, 0, 0.1, 1);
+        --cyan-3: #66d9e8;
+        --ease-squish-3: cubic-bezier(0.5, -0.5, 0.1, 1.5);
+        --layer-2: 2;
+        --ease-3: cubic-bezier(0.25, 0, 0.3, 1);
+        --indigo-0: #edf2ff;
+        --indigo-8: #3b5bdb;
+        --indigo-1: #dbe4ff;
+        --font-letterspacing-3: 0.075em;
+        --indigo-12-hsl: 230 57% 30%;
+        --font-letterspacing-2: 0.05em;
+        --font-weight-2: 200;
+        --font-weight-3: 300;
+        --font-size-7: 3rem;
+        --size-9: 4rem;
+        --ease-elastic-3: cubic-bezier(0.5, 1.25, 0.75, 1.25);
+        --ease-elastic-4: cubic-bezier(0.5, 1.5, 0.75, 1.25);
+        --ease-out-5: cubic-bezier(0, 0, 0, 1);
+        --animation-fade-out: fade-out 0.5s var(--ease-3);
+        --animation-scale-down: scale-down 0.5s var(--ease-3);
+        --animation-fade-in: fade-in 0.5s var(--ease-3);
+        --animation-slide-in-right: slide-in-right 0.5s var(--ease-3);
+        -webkit-text-size-adjust: none;
+        accent-color: var(--brand, var(--link));
+        caret-color: var(--brand, var(--link));
+        font-family: var(--font-sans);
+        scrollbar-color: var(--scrollthumb-color) transparent;
+        --nav-height: 72px;
+        --link: var(--indigo-3);
+        --link-visited: var(--purple-3);
+        --text-1: var(--gray-0);
+        --text-2: var(--gray-4);
+        --surface-2: var(--gray-8);
+        --surface-3: var(--gray-7);
+        --surface-4: var(--gray-6);
+        --scrollthumb-color: var(--gray-6);
+        --shadow-strength: 10%;
+        --shadow-color: 220 40% 2%;
+        --inner-shadow-highlight: inset 0 -0.5px 0 0 hsla(0, 0%, 100%, 0.067),
+          inset 0 0.5px 0 0 rgba(0, 0, 0, 0.467);
+        color-scheme: dark;
+        --_syntax-color-read: var(--text-1);
+        --_syntax-color-subdued: var(--text-2);
+        --_syntax-color-1: var(--neon-purple-on-dark);
+        --_syntax-color-2: var(--neon-cyan);
+        --_syntax-color-3: var(--neon-pink);
+        --shiki-token-comment: var(--gray-6);
+        --neon-red: var(--red-6);
+        --neon-cyan: cyan;
+        --neon-pink: #ff1493;
+        --neon-purple: var(--purple-6);
+        --neon-purple-on-dark: #9461fd;
+        --neon-blue: #2dd9fe;
+        --neon-green: var(--lime-6);
+        --neon-orange: var(--orange-6);
+        --neon-yellow: var(--yellow-3);
+        --size-inline-1: var(--size-3);
+        --surface-document: var(--gray-12);
+        --surface-1: var(--gray-10);
+        --rem: 16;
+        box-sizing: border-box;
+        margin: 0;
+        border-style: solid;
+        border-width: 0; */
+        font-weight: 900;
+        font-size: 3.5rem;
+        /* max-inline-size: var(--size-header-1); */
+        /* grid-column: 2; */
+        text-wrap: balance;
+        background: repeating-conic-gradient(
+          from 0deg at 10% 50%,
+          brown 0deg 10deg,
+          darkgoldenrod 10deg 20deg,
+          chocolate 20deg 30deg
+        );
+        animation: spin 10s linear infinite;
+        /* background: linear-gradient(
+          to top right,
+          var(--color-1) calc(19% - 1px),
+          transparent 19%,
+          transparent calc(20% - 1px),
+          var(--color-2) 20%,
+          var(--color-2) calc(39% - 1px),
+          transparent 39%,
+          transparent calc(40% - 1px),
+          var(--color-3) 40%,
+          var(--color-3) calc(59% - 1px),
+          transparent 59%,
+          transparent calc(60% - 1px),
+          var(--color-4) 60%,
+          var(--color-4) calc(79% - 1px),
+          transparent 79%,
+          transparent calc(80% - 1px),
+          var(--color-5) 80%
+        ); */
+        /* https://codepen.io/jensaxena/pen/KQmvoK */
+        -webkit-background-clip: text;
+        color: transparent;
+        line-height: 1.25cap;
+        padding-block-end: 0.25ch;
+        word-break: break-word;
       }
 
-      @supports (-webkit-text-stroke: 2px white) {
-        h1 {
-          -webkit-text-stroke: 2px white;
-          -webkit-text-fill-color: transparent;
+      @keyframes spin {
+        0% {
+          background-position: 0 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0 50%;
         }
       }
     </style>
