@@ -1,0 +1,19 @@
+{
+  "version": "3",
+  "packages": {
+    "specifiers": {
+      "jsr:@std/http@^1.0.6": "jsr:@std/http@1.0.6"
+    },
+    "jsr": {
+      "@std/http@1.0.6": {
+        "integrity": "20a6f3fa4a914fbb19ea96572f2519b656232597092581ed706cd865d842d0d0"
+      }
+    }
+  },
+  "remote": {},
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/http@^1.0.6"
+    ]
+  }
+}
