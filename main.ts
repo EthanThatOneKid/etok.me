@@ -1,5 +1,6 @@
 import type { Route } from "@std/http/unstable-route";
 import { route } from "@std/http/unstable-route";
+// import { serveDir } from "@std/http/file-server";
 import { go } from "go.fart.tools";
 
 export default {
@@ -12,7 +13,7 @@ export const routes: Route[] = [
   {
     method: "GET",
     pattern: new URLPattern({ pathname: "/:path*" }),
-    handler(request, _info) {
+    handler(request) {
       const url = new URL(request.url);
       const destinationURL = go(
         url,
@@ -31,6 +32,20 @@ export const routes: Route[] = [
           },
         },
       );
+    },
+  },
+  {
+    method: "GET",
+    pattern: new URLPattern({ pathname: "/*" }),
+    handler(_request) {
+      return Response.redirect("https://github.com/EthanThatOneKid");
+      // return serveDir(
+      //   request.clone(),
+      //   {
+      //     fsRoot: "./static",
+      //     showIndex: true,
+      //   },
+      // );
     },
   },
 ];
