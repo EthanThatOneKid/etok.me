@@ -1,0 +1,33 @@
+{
+  "version": "3",
+  "packages": {
+    "specifiers": {
+      "jsr:@cross/deepmerge@^1.0.0": "jsr:@cross/deepmerge@1.0.0",
+      "jsr:@fartlabs/htx@^0.0.5": "jsr:@fartlabs/htx@0.0.5",
+      "jsr:@fartlabs/jsonx@^0.0.11": "jsr:@fartlabs/jsonx@0.0.11"
+    },
+    "jsr": {
+      "@cross/deepmerge@1.0.0": {
+        "integrity": "1e1318a74e31ba1959b9aa0acae8bd417b806f74ffd25ac07c90e12f83ad6b1d"
+      },
+      "@fartlabs/htx@0.0.5": {
+        "integrity": "7035ca461f23e97e9090f087012b6c3858a85e2372158679b4e866f30803af07",
+        "dependencies": [
+          "jsr:@fartlabs/jsonx@^0.0.11"
+        ]
+      },
+      "@fartlabs/jsonx@0.0.11": {
+        "integrity": "25e70bc64e680c90f0b91d2e639a04d3e8a7811809282a4b82a27e2862218438",
+        "dependencies": [
+          "jsr:@cross/deepmerge@^1.0.0"
+        ]
+      }
+    }
+  },
+  "remote": {},
+  "workspace": {
+    "dependencies": [
+      "jsr:@fartlabs/htx@^0.0.5"
+    ]
+  }
+}
