@@ -10,7 +10,12 @@
       }
     }
   },
-  "remote": {},
+  "redirects": {
+    "https://github.com/FartLabs/go.fart.tools/raw/ce10c86e759a50eac7140582df4542f2e6d0a1a7/go.ts": "https://raw.githubusercontent.com/FartLabs/go.fart.tools/ce10c86e759a50eac7140582df4542f2e6d0a1a7/go.ts"
+  },
+  "remote": {
+    "https://raw.githubusercontent.com/FartLabs/go.fart.tools/ce10c86e759a50eac7140582df4542f2e6d0a1a7/go.ts": "2f4a60a0948614e547dce564cfa7385bdd519f2cb916cfb8c4ba39a320e45b4f"
+  },
   "workspace": {
     "dependencies": [
       "jsr:@std/http@^1.0.6"
