@@ -19,6 +19,9 @@ export const routes: Route[] = [
         url,
         {
           "and": "https://and.etok.me",
+          "and/buster": "/and/buster",
+          "and/dad": "/and/dad",
+          "and/mom": "/and/mom",
           "codes": "https://etok.codes",
           "id": "https://id.etok.me",
         },
