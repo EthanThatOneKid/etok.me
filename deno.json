@@ -5,6 +5,6 @@
     "go.fart.tools": "https://github.com/FartLabs/go.fart.tools/raw/ce10c86e759a50eac7140582df4542f2e6d0a1a7/go.ts"
   },
   "tasks": {
-    "start": "deno serve -R --allow-net --parallel main.ts"
+    "start": "deno serve --allow-read --allow-net --parallel main.ts"
   }
 }
