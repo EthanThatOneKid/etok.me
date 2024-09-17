@@ -1,6 +1,7 @@
 import type { Route } from "@std/http/unstable-route";
 import { route } from "@std/http/unstable-route";
 import { serveDir } from "@std/http/file-server";
+import { parse } from "@std/jsonc";
 import { go } from "go.fart.tools";
 
 export default {
@@ -14,18 +15,7 @@ export const routes: Route[] = [
     method: "GET",
     pattern: new URLPattern({ pathname: "/:path*" }),
     handler(request) {
-      const url = new URL(request.url);
-      const destinationURL = go(
-        url,
-        {
-          "and": "https://and.etok.me",
-          "and/buster": "/and/buster",
-          "and/dad": "/and/dad",
-          "and/mom": "/and/mom",
-          "codes": "https://etok.codes",
-          "id": "https://id.etok.me",
-        },
-      );
+      const destinationURL = go(new URL(request.url), shortlinks);
       return new Response(
         null,
         {
@@ -35,6 +25,12 @@ export const routes: Route[] = [
           },
         },
       );
+    },
+  },
+  {
+    method: "GET",
+    handler(_request) {
+      // https://deno.com/blog/deploy-cache-api
     },
   },
   {
@@ -57,3 +53,9 @@ export function defaultHandler(_request: Request) {
 }
 
 export const router = route(routes, defaultHandler);
+
+export const shortlinks = parse(
+  await Deno.readTextFile(
+    new URL("./static/shortlinks.jsonc", import.meta.url),
+  ),
+);

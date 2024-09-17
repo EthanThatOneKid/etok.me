@@ -6,6 +6,7 @@
       "jsr:@std/encoding@^1.0.5": "jsr:@std/encoding@1.0.5",
       "jsr:@std/fmt@^1.0.2": "jsr:@std/fmt@1.0.2",
       "jsr:@std/http@^1.0.6": "jsr:@std/http@1.0.6",
+      "jsr:@std/jsonc@^1.0.1": "jsr:@std/jsonc@1.0.1",
       "jsr:@std/media-types@^1.0.3": "jsr:@std/media-types@1.0.3",
       "jsr:@std/net@^1.0.3": "jsr:@std/net@1.0.4",
       "jsr:@std/path@^1.0.5": "jsr:@std/path@1.0.6",
@@ -33,6 +34,9 @@
           "jsr:@std/streams@^1.0.5"
         ]
       },
+      "@std/jsonc@1.0.1": {
+        "integrity": "6b36956e2a7cbb08ca5ad7fbec72e661e6217c202f348496ea88747636710dda"
+      },
       "@std/media-types@1.0.3": {
         "integrity": "b12d30a7852f7578f4d210622df713bbfd1cbdd9b4ec2eaf5c1845ab70bab159"
       },
@@ -55,7 +59,8 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@std/http@^1.0.6"
+      "jsr:@std/http@^1.0.6",
+      "jsr:@std/jsonc@^1.0.1"
     ]
   }
 }
