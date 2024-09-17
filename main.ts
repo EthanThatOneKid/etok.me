@@ -29,12 +29,6 @@ export const routes: Route[] = [
   },
   {
     method: "GET",
-    handler(_request) {
-      // https://deno.com/blog/deploy-cache-api
-    },
-  },
-  {
-    method: "GET",
     pattern: new URLPattern({ pathname: "/*" }),
     handler(request) {
       return serveDir(
@@ -58,4 +52,4 @@ export const shortlinks = parse(
   await Deno.readTextFile(
     new URL("./static/shortlinks.jsonc", import.meta.url),
   ),
-);
+) as Record<string, string>;
