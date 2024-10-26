@@ -6,5 +6,12 @@
   "id": "https://id.etok.me",
   "dm": "https://x.com/messages/compose?recipient_id=757639137029595136",
   "resume": "https://docs.google.com/document/d/1cVAb7qSY0J4HEOOHIfcIVteVXEcmkpNBc_smA134tOE/view",
-  "resume.pdf": "https://docs.google.com/document/d/1cVAb7qSY0J4HEOOHIfcIVteVXEcmkpNBc_smA134tOE/export?format=pdf"
+  "resume.pdf": "https://docs.google.com/document/d/1cVAb7qSY0J4HEOOHIfcIVteVXEcmkpNBc_smA134tOE/export?format=pdf",
+  "github": "https://github.com/EthanThatOneKid",
+  "gh": "/github",
+  "twitter": "https://x.com/__etok__",
+  "linkedin": "https://linkedin.com/in/etok",
+  "instagram": "https://instagram.com/ethanthatonekid",
+  "producthunt": "https://producthunt.com/@etok",
+  "blahaj": "https://blahaj.zone/@etok"
 }
