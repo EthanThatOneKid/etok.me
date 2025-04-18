@@ -3,12 +3,16 @@ import { route } from "@std/http/unstable-route";
 import { serveDir } from "@std/http/file-server";
 import { parse } from "@std/jsonc";
 import { go } from "go.fart.tools";
+import { useGoogleAnalytics } from "./google-analytics.ts";
 
-export default {
-  fetch(request) {
-    return router(request);
-  },
-} satisfies Deno.ServeDefaultExport;
+if (import.meta.main) {
+  Deno.serve(
+    useGoogleAnalytics(
+      Deno.env.get("GOOGLE_ANALYTICS_ID"),
+      (request) => router(request),
+    ),
+  );
+}
 
 export const routes: Route[] = [
   {
@@ -16,28 +20,22 @@ export const routes: Route[] = [
     pattern: new URLPattern({ pathname: "/:path*" }),
     handler(request) {
       const destinationURL = go(new URL(request.url), shortlinks);
-      return new Response(
-        null,
-        {
-          status: 301,
-          headers: {
-            "Location": destinationURL.toString(),
-          },
+      return new Response(null, {
+        status: 301,
+        headers: {
+          Location: destinationURL.toString(),
         },
-      );
+      });
     },
   },
   {
     method: "GET",
     pattern: new URLPattern({ pathname: "/*" }),
     handler(request) {
-      return serveDir(
-        request.clone(),
-        {
-          fsRoot: "./static",
-          showIndex: true,
-        },
-      );
+      return serveDir(request.clone(), {
+        fsRoot: "./static",
+        showIndex: true,
+      });
     },
   },
 ];
