@@ -1,13 +1,16 @@
 {
   "lock": false,
   "imports": {
-    "@kitsonk/ga4": "jsr:@kitsonk/ga4@^0.1.0",
-    "@std/http": "jsr:@std/http@^1.0.12",
     "@std/jsonc": "jsr:@std/jsonc@^1.0.1",
     "go.fart.tools": "https://github.com/FartLabs/go.fart.tools/raw/ce10c86e759a50eac7140582df4542f2e6d0a1a7/go.ts"
   },
   "tasks": {
-    "start": "deno serve --allow-read --allow-import --allow-env --parallel main.ts",
+    "start": {
+      "description": "Start the project",
+      "command": "deno -A jsr:@std/http/file-server",
+      "dependencies": ["generate"]
+    },
+    "generate": "deno -A main.ts",
     "outdated": "deno outdated --latest --update"
   }
 }
