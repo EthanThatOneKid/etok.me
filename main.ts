@@ -7,7 +7,7 @@ if (import.meta.main) {
   await Deno.copyFile("./index.html", `${output}/index.html`);
 
   const shortlinks = parse(
-    await Deno.readTextFile(new URL(import.meta.resolve("./shortlinks.jsonc")))
+    await Deno.readTextFile(new URL(import.meta.resolve("./shortlinks.jsonc"))),
   ) as Record<string, string>;
   for (const alias of Object.keys(shortlinks)) {
     const url = go(new URL(`https://etok.me/${alias}`), shortlinks);
@@ -19,7 +19,7 @@ if (import.meta.main) {
   <head>
     <meta http-equiv="refresh" content="0; url=${url}" />
   </head>
-</html>`
+</html>`,
     );
   }
 }
