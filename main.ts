@@ -1,10 +1,19 @@
 import { parse } from "@std/jsonc";
+import { walk } from "@std/fs/walk";
 import { go } from "go.fart.tools";
 
 if (import.meta.main) {
   const output = Deno.args[0] ?? "./static";
   await Deno.mkdir(output, { recursive: true });
   await Deno.copyFile("./index.html", `${output}/index.html`);
+
+  for await (const entry of walk("./lib")) {
+    if (entry.isDirectory) {
+      await Deno.mkdir(`${output}/${entry.path}`, { recursive: true });
+    } else if (entry.isFile) {
+      await Deno.copyFile(entry.path, `${output}/${entry.path}`);
+    }
+  }
 
   const shortlinks = parse(
     await Deno.readTextFile(new URL(import.meta.resolve("./shortlinks.jsonc"))),
