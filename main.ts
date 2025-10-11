@@ -6,6 +6,8 @@ if (import.meta.main) {
   const output = Deno.args[0] ?? "./static";
   await Deno.mkdir(output, { recursive: true });
   await Deno.copyFile("./index.html", `${output}/index.html`);
+  await Deno.copyFile("./writing.html", `${output}/writing.html`);
+  await Deno.copyFile("./resume.html", `${output}/resume.html`);
 
   for await (const entry of walk("./lib")) {
     if (entry.isDirectory) {
