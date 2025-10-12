@@ -1,28 +1,23 @@
-/* Project preview grid styles for etok.me */
 .canvas-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
 }
 
 .project-preview-grid {
-  display: grid;
-  gap: 2rem;
   margin: 2rem 0;
-}
-
-.card {
-  border-radius: 8px;
-  padding: 1rem;
-  background: var(--fart-lighter-dark-primary);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .preview-image {
   width: 100%;
-  height: 200px;
+  outline: 1px solid var(--fart-primary);
   object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 1rem;
+  border-radius: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.preview-image:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  outline: 1px solid var(--fart-secondary);
 }
