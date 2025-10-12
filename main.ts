@@ -6,6 +6,7 @@ if (import.meta.main) {
   const output = Deno.args[0] ?? "./static";
   await Deno.mkdir(output, { recursive: true });
   await Deno.copyFile("./index.html", `${output}/index.html`);
+  await Deno.copyFile("./index.css", `${output}/index.css`);
 
   await copy("./lib", `${output}/lib`, { overwrite: true });
   await copy("./assets", `${output}/assets`, { overwrite: true });
