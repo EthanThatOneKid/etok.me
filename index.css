@@ -21,3 +21,10 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   outline: 1px solid var(--fart-secondary);
 }
+
+.outbound::after {
+  content: attr(href) "↗";
+  color: grey;
+  font-size: 0.7em;
+  margin-left: 0.5em;
+}
