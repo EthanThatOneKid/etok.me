@@ -31,3 +31,68 @@
 .outbound:hover::after {
   color: var(--fart-secondary);
 }
+
+/* Skill chips */
+.skill-chip {
+  display: inline-block;
+  padding: 0.18em 0.9em;
+  margin: 0 0.2em 0.2em 0;
+  font-size: 0.97em;
+  font-weight: 600;
+  border-radius: 1.2em;
+  background: #eee;
+  color: #212121;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.01em;
+  vertical-align: middle;
+}
+.skill-chip-red {
+  background: #ff4d4d;
+  color: #fff;
+}
+.skill-chip-orange {
+  background: #ffa500;
+  color: #fff;
+}
+.skill-chip-yellow {
+  background: #ffe066;
+  color: #333;
+}
+.skill-chip-green {
+  background: #2ecc40;
+  color: #fff;
+}
+.skill-chip-blue {
+  background: #3498db;
+  color: #fff;
+}
+.skill-chip-indigo {
+  background: #7c5cff;
+  color: #fff;
+}
+
+.fart-section#skills ul ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0.6em 0 1em 0;
+}
+.fart-section#skills ul ul li {
+  display: inline-block;
+  margin: 0 0.4em 0.4em 0;
+  padding: 0;
+}
+
+.skill-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0.6em 0 1em 0;
+}
+.skill-chip-list li {
+  display: inline-block;
+  margin: 0 0.4em 0.4em 0;
+  padding: 0;
+}
