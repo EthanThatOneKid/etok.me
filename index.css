@@ -2,6 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+
+#galaxyCanvas {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .project-preview-grid {
