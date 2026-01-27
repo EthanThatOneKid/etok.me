@@ -1,3 +1,20 @@
+nav, .fart-section nav, #top nav {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 1rem !important;
+}
+
+.fart-section nav h1, .fart-section nav h1 a {
+  margin: 0 !important;
+  display: inline-block !important;
+  width: auto !important;
+}
+
 .canvas-container {
   display: flex;
   justify-content: center;
