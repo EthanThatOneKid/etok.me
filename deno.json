@@ -1,9 +1,9 @@
 {
   "lock": false,
   "imports": {
-    "@std/fs": "jsr:@std/fs@^1.0.21",
+    "@std/fs": "jsr:@std/fs@^1.0.23",
     "@std/jsonc": "jsr:@std/jsonc@^1.0.2",
-    "go.fart.tools": "https://github.com/FartLabs/go.fart.tools/raw/ce10c86e759a50eac7140582df4542f2e6d0a1a7/go.ts"
+    "@fartlabs/go": "jsr:@fartlabs/go@^0.0.3"
   },
   "tasks": {
     "start": {
@@ -12,6 +12,6 @@
       "dependencies": ["generate"]
     },
     "generate": "deno -A main.ts",
-    "outdated": "deno outdated --latest --update"
+    "outdated": "deno update --latest"
   }
 }

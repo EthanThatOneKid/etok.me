@@ -3,25 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ethan Davidson</title>
+    <title>Ethan Davidson | Software Engineer & Community Builder</title>
     <meta
       name="description"
-      content="Ethan Davidson, known online as EthanThatOneKid or Etok, is a community builder and founder of projects like @FartLabs, @acmcsufoss, and @Vaqcoders."
+      content="Ethan Davidson (EthanThatOneKid) is a software engineer leading imagination-driven development at Wazoo, formerly at Google. Founder of FartLabs, FullyHacks, and more."
     >
-    <meta property="og:title" content="Ethan Davidson" />
+    <link rel="canonical" href="https://etok.me/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://etok.me/" />
+    <meta
+      property="og:title"
+      content="Ethan Davidson | Software Engineer & Community Builder"
+    />
     <meta
       property="og:description"
-      content="Engineer and community builder focused on imagination-driven systems."
+      content="Software engineer at Wazoo, former Google engineer. Community builder and founder of FartLabs and FullyHacks."
+    />
+    <meta property="og:image" content="https://etok.me/assets/wazoo.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://etok.me/" />
+    <meta
+      property="twitter:title"
+      content="Ethan Davidson | Software Engineer & Community Builder"
     />
     <meta
-      property="og:url"
-      content="https://etok.me/"
+      property="twitter:description"
+      content="Software engineer at Wazoo, former Google engineer. Community builder and founder of FartLabs and FullyHacks."
     />
+    <meta property="twitter:image" content="https://etok.me/assets/wazoo.png" />
     <meta name="twitter:creator" content="@etok_me" />
 
     <link rel="stylesheet" type="text/css" href="https://css.fart.tools">
     <link rel="stylesheet" type="text/css" href="/index.css">
     <link rel="icon" href="https://fart.tools/fl-logo.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://etok.me/#person",
+            "name": ["Ethan", "EthanThatOneKid", "Etok"],
+            "identifier": "etok",
+            "description": "Ethan Davidson, a California State University, Fullerton alum with a Bachelor of Science degree in Computer Science and former software engineering intern, is interested in web development, open-source, and Pokémon breeding and glitching.",
+            "url": "https://ethandavidson.com/",
+            "sameAs": [
+              "https://github.com/EthanThatOneKid",
+              "https://linkedin.com/in/etok",
+              "https://devpost.com/EthanThatOneKid",
+              "https://bsky.app/profile/etok.me",
+              "https://blahaj.zone/@etok",
+              "https://producthunt.com/@etok",
+              "https://twitter.com/__etok__"
+            ],
+            "email": "mailto:ethan.r.davidson@gmail.com",
+            "birthDate": "2001-03-24",
+            "knowsLanguage": "en",
+            "worksFor": {
+              "@id": "https://wazoo.dev/"
+            },
+            "alumniOf": {
+              "@id": "https://acmcsuf.com/"
+            },
+            "colleague": [
+              { "@id": "https://0xd14.id/" },
+              { "@id": "https://id.johncarlomanuel.com/" }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://etok.me/#website",
+            "url": "https://etok.me/",
+            "name": "Ethan Davidson",
+            "author": { "@id": "https://etok.me/#person" }
+          }
+        ]
+      }
+    </script>
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -42,7 +106,7 @@
   <body>
     <section class="fart-section" id="top">
       <nav>
-        <h1 class="fart-header"><a href="/">Etok.me</a></h1>
+        <span class="fart-brand"><a href="/">Etok.me</a></span>
         <span>
           <a
             class="fart-button"
@@ -58,7 +122,9 @@
       </nav>
 
       <p>
-        Ethan Davidson, known online as <strong>EthanThatOneKid</strong> or
+        <h1 style="display: inline; font-size: inherit; font-weight: inherit">
+          Ethan Davidson
+        </h1>, known online as <strong>EthanThatOneKid</strong> or
         <strong>Etok</strong>, is a full-stack software engineer leading
         imagination-driven development at <strong>Wazoo</strong>, with
         enterprise-scale experience formed at <strong>Google</strong> on the
@@ -191,7 +257,7 @@
       >
         <img
           src="http://i3.ytimg.com/vi/c9zFBcZ-Px0/hqdefault.jpg"
-          alt="Podcast appearance"
+          alt="Ethan Davidson on Sachin Lohdi's podcast discussing AI and community building"
           class="preview-image"
         />
       </a>
@@ -216,7 +282,7 @@
         >
           <img
             src="/assets/wazoo.png"
-            alt="Wazoo.tech"
+            alt="Wazoo.tech - AI memory and world-models as a service"
             class="preview-image"
           />
         </a>
@@ -236,7 +302,7 @@
         >
           <img
             src="/assets/wazoo-ai.png"
-            alt="Wazoo AI"
+            alt="Wazoo AI - Tailored AI business solutions consultancy"
             class="preview-image"
           />
         </a>
@@ -256,7 +322,7 @@
         >
           <img
             src="/assets/wazoo-studio.png"
-            alt="Studio Wazoo"
+            alt="Studio Wazoo - Creative web design studio"
             class="preview-image"
           />
         </a>
@@ -285,7 +351,7 @@
         >
           <img
             src="/assets/fartlabs.png"
-            alt="FartLabs"
+            alt="FartLabs - Open-source research lab and web innovation community"
             class="preview-image"
           />
         </a>
@@ -313,7 +379,7 @@
         >
           <img
             src="/assets/holosuite.png"
-            alt="Holosuite.lol"
+            alt="Holosuite - Simulation creation and sharing platform"
             class="preview-image"
           />
         </a>
@@ -330,7 +396,7 @@
         >
           <img
             src="/assets/tradingpings.png"
-            alt="TradingPings.com"
+            alt="TradingPings.com - AI-powered trading alerts platform"
             class="preview-image"
           />
         </a>
@@ -349,7 +415,7 @@
         >
           <img
             src="/assets/fullyhacks2024.webp"
-            alt="FullyHacks 2024"
+            alt="FullyHacks 2024 - Annual CSUF hackathon mascot and logo"
             class="preview-image"
           />
         </a>
@@ -370,7 +436,7 @@
         >
           <img
             src="/assets/acmcsuf.png"
-            alt="ACM at CSUF"
+            alt="ACM at CSUF - Computer Science community at California State University, Fullerton"
             class="preview-image"
           />
         </a>
@@ -425,7 +491,7 @@
         >
           <img
             src="/assets/deno-blocks.png"
-            alt="Deno Blocks"
+            alt="Deno Blocks - Drag and drop visual code editor"
             class="preview-image"
           />
         </a>
@@ -602,6 +668,8 @@
           class="fart-logo"
           href="#top"
         >🤟</a>
+        <br />
+        <small>Last updated: February 2026</small>
         <br />
         <a
           class="fart-button"

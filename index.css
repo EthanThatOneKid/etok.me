@@ -9,10 +9,12 @@ nav, .fart-section nav, #top nav {
   padding: 0 1rem !important;
 }
 
-.fart-section nav h1, .fart-section nav h1 a {
+.fart-section nav h1, .fart-section nav h1 a, .fart-brand, .fart-brand a {
   margin: 0 !important;
   display: inline-block !important;
   width: auto !important;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .canvas-container {
