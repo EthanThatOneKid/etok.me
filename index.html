@@ -63,7 +63,7 @@
               "https://x.com/etok_me",
               "https://grokipedia.com/page/Ethan_Davidson"
             ],
-            "email": "mailto:ethan@wazoo.dev",
+            "email": "mailto:ethan.r.davidson@gmail.com",
             "birthDate": "2001-03-24",
             "knowsLanguage": "en",
             "worksFor": [
@@ -168,7 +168,7 @@
       <ul>
         <li>
           <a
-            href="mailto:ethan@wazoo.dev"
+            href="mailto:ethan.r.davidson@gmail.com"
             target="_blank"
             rel="noopener"
             class="outbound"
@@ -654,30 +654,98 @@
     <hr />
 
     <footer>
-      <p>
-        Created with <a
-          href="https://css.fart.tools"
-          class="fart-sparkle"
-        >Fart.css</a> by Ethan Davidson <a
-          class="fart-logo"
-          href="#top"
-        >🤟</a>
+      <div class="footer-content">
+        <p class="footer-credits">
+          Created with <a
+            href="https://css.fart.tools"
+            class="fart-sparkle"
+          >Fart.css</a> by Ethan Davidson <a
+            class="fart-logo"
+            href="#top"
+          >🤟</a>
+        </p>
+        <div class="footer-links">
+          <a
+            class="fart-button"
+            href="https://github.com/EthanThatOneKid"
+            target="_blank"
+          >GitHub</a>
+          <a
+            class="fart-button"
+            href="https://linkedin.com/in/etok"
+            target="_blank"
+          >LinkedIn</a>
+          <a
+            class="fart-button"
+            href="https://bsky.app/profile/etok.me"
+            target="_blank"
+          >Bluesky</a>
+          <a
+            class="fart-button"
+            href="https://x.com/etok_me"
+            target="_blank"
+          >X/Twitter</a>
+        </div>
+      </div>
+
+      <div class="webring-container">
+        <!-- Previous Site Link -->
         <a
-          class="fart-button"
-          href="https://github.com/EthanThatOneKid"
-          target="_blank"
-        >GitHub</a>
+          href="https://webring-1.vercel.app/?from=etok&dir=prev"
+          class="webring-btn"
+          title="Previous site"
+          rel="noopener noreferrer"
+        >
+          <!-- Left Arrow SVG -->
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </a>
+
+        <!-- Dynamic Copyright text -->
+        <p class="webring-text">
+          <!-- <a href="https://acmcsuf.com"> -->
+          ACM @ CSUF webring
+          <!-- </a> -->
+        </p>
+
+        <!-- Next Site Link -->
         <a
-          class="fart-button"
-          href="https://linkedin.com/in/etok"
-          target="_blank"
-        >LinkedIn</a>
-        <a
-          class="fart-button"
-          href="https://bsky.app/profile/etok.me"
-          target="_blank"
-        >Bluesky</a>
-      </p>
+          href="https://webring-1.vercel.app/?from=etok&dir=next"
+          class="webring-btn"
+          title="Next site"
+          rel="noopener noreferrer"
+        >
+          <!-- Right Arrow SVG -->
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+      </div>
     </footer>
+
+    <script>
+      // Dynamically set the current year in the footer
+      document.getElementById("current-year").textContent = new Date()
+        .getFullYear();
+    </script>
   </body>
 </html>
