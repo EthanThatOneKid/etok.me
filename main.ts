@@ -26,6 +26,26 @@ if (import.meta.main) {
 <html>
   <head>
     <meta http-equiv="refresh" content="0; url=${url}" />
+    <script id="shortlinks" type="application/json">
+${JSON.stringify(shortlinks, null, 2)}
+    </script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@fartlabs/go": "https://esm.sh/jsr/@fartlabs/go@0.0.3"
+        }
+      }
+    </script>
+    <script type="module">
+      import { go } from "@fartlabs/go";
+      const shortlinks = JSON.parse(
+        document.getElementById("shortlinks").textContent,
+      );
+      const result = go(new URL(location.href), shortlinks);
+      if (result && result !== location.href) {
+        location.replace(result);
+      }
+    </script>
   </head>
 </html>`,
     );
@@ -52,4 +72,57 @@ ${
   }
 </urlset>`;
   await Deno.writeTextFile(`${output}/sitemap.xml`, sitemapContent);
+
+  // Generate 404.html for dynamic redirection
+  await Deno.writeTextFile(
+    `${output}/404.html`,
+    `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script id="shortlinks" type="application/json">
+${JSON.stringify(shortlinks, null, 2)}
+    </script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@fartlabs/go": "https://esm.sh/jsr/@fartlabs/go@0.0.3"
+        }
+      }
+    </script>
+    <script type="module">
+      import { go } from "@fartlabs/go";
+      const shortlinks = JSON.parse(
+        document.getElementById("shortlinks").textContent,
+      );
+      const result = go(new URL(location.href), shortlinks);
+      if (result && result !== location.href) {
+        location.replace(result);
+      } else {
+        // Fallback UI if no match is found
+        document.body.innerHTML = \`
+          <div style="font-family: system-ui; text-align: center; padding: 2rem;">
+            <h1>404 Not Found</h1>
+            <p>The page you are looking for does not exist.</p>
+            <a href="/">Go to Home Page</a>
+          </div>
+        \`;
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <div style="font-family: system-ui; text-align: center; padding: 2rem;">
+        <h1>404 Not Found</h1>
+        <p>The page you are looking for does not exist.</p>
+        <a href="/">Go to Home Page</a>
+      </div>
+    </noscript>
+    <div id="redirecting-message" style="font-family: system-ui; text-align: center; padding: 2rem;">
+      <p>Redirecting...</p>
+    </div>
+  </body>
+</html>`,
+  );
 }
