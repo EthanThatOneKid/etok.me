@@ -26,6 +26,26 @@ if (import.meta.main) {
 <html>
   <head>
     <meta http-equiv="refresh" content="0; url=${url}" />
+    <script id="shortlinks" type="application/json">
+${JSON.stringify(shortlinks, null, 2)}
+    </script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@fartlabs/go": "https://esm.sh/jsr/@fartlabs/go@0.0.3"
+        }
+      }
+    </script>
+    <script type="module">
+      import { go } from "@fartlabs/go";
+      const shortlinks = JSON.parse(
+        document.getElementById("shortlinks").textContent,
+      );
+      const result = go(new URL(location.href), shortlinks);
+      if (result && result !== location.href) {
+        location.replace(result);
+      }
+    </script>
   </head>
 </html>`,
     );
