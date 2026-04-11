@@ -28,6 +28,11 @@ This 404 page uses the [`@fartlabs/go`](https://github.com/fartlabs/go) library
 to parse the URL and redirect users to the appropriate destination as defined in
 [`shortlinks.jsonc`](./shortlinks.jsonc).
 
+This also enables subpath redirection, allowing for convenient self-links. For
+example, [`etok.me/codes/etok.me`](https://etok.me/codes/etok.me) will
+redirect to
+[`github.com/EthanThatOneKid/etok.me`](https://github.com/EthanThatOneKid/etok.me).
+
 ---
 
 Programmed with 💖 by [**@EthanThatOneKid**](https://etok.codes/)
