@@ -29,8 +29,8 @@ to parse the URL and redirect users to the appropriate destination as defined in
 [`shortlinks.jsonc`](./shortlinks.jsonc).
 
 This also enables subpath redirection, allowing for convenient self-links. For
-example, [`etok.me/codes/etok.me`](https://etok.me/codes/etok.me) will
-redirect to
+example, [`etok.me/codes/etok.me`](https://etok.me/codes/etok.me) will redirect
+to
 [`github.com/EthanThatOneKid/etok.me`](https://github.com/EthanThatOneKid/etok.me).
 
 ---
