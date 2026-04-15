@@ -33,10 +33,6 @@ body {
   overflow-x: hidden;
 }
 
-.project-preview-grid {
-  margin: 2rem 0;
-}
-
 .preview-image {
   width: 100%;
   outline: 1px solid var(--fart-primary);
@@ -100,19 +96,6 @@ body {
   color: #fff;
 }
 
-.fart-section#skills ul ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0.6em 0 1em 0;
-}
-.fart-section#skills ul ul li {
-  display: inline-block;
-  margin: 0 0.4em 0.4em 0;
-  padding: 0;
-}
-
 .skill-chip-list {
   display: flex;
   flex-wrap: wrap;
@@ -130,16 +113,7 @@ footer {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  gap: 1.5rem !important;
   padding: 2rem 1rem !important;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  text-align: center;
 }
 
 .footer-credits {
