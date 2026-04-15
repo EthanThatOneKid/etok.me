@@ -153,7 +153,8 @@ footer {
   gap: 0.5rem;
 }
 
-.webring-container {
+.webring-container,
+webring-element .webring {
   display: flex !important;
   flex-direction: row !important;
   flex-wrap: nowrap !important;
@@ -175,7 +176,8 @@ footer {
   white-space: nowrap;
 }
 
-.webring-btn {
+.webring-btn,
+webring-element .webring-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -186,7 +188,56 @@ footer {
   transition: background-color 0.2s ease, opacity 0.2s ease;
 }
 
-.webring-btn:hover {
-  background-color: rgba(0, 0, 0, 0.05); /* subtle hover effect */
+.webring-btn:hover,
+webring-element .webring-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
   opacity: 0.7;
+}
+
+webring-element .webring-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+webring-element {
+  margin: 0.5rem 0;
+}
+
+webring-element .ring-info {
+  display: none;
+}
+
+webring-element .ring-body {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  margin: 0 !important;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+webring-element .ring-body .left,
+webring-element .ring-body .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-decoration: none;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+webring-element .ring-body .left:hover,
+webring-element .ring-body .right:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  opacity: 0.7;
+}
+
+webring-element .ring-body .middle {
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
 }
