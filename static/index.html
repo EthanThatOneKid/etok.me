@@ -39,8 +39,6 @@
 
     <link rel="stylesheet" type="text/css" href="https://css.fart.tools">
     <link rel="stylesheet" type="text/css" href="/index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/diamondburned/libwebring@nightly/dist/webring.css">
-    <script type="module" src="https://cdn.jsdelivr.net/gh/diamondburned/libwebring@nightly/dist/webring-element.js"></script>
     <link rel="icon" href="https://fart.tools/fl-logo.png">
 
     <!-- Structured Data -->
@@ -513,8 +511,8 @@
       </section>
     </section>
 
-    <section class="fart-section" id="skills">
-      <h2>Skills</h2>
+    <section class="fart-section" id="stack">
+      <h2>Stack</h2>
       <ul>
         <li>
           <strong>Languages & Frameworks:</strong>
@@ -675,90 +673,80 @@
     <hr />
 
     <footer>
-      <div class="footer-content">
-        <p class="footer-credits">
-          Created with <a
-            href="https://css.fart.tools"
-            class="fart-sparkle"
-          >Fart.css</a> by Ethan Davidson · © <span id="current-year"></span>
-        </p>
-        <div class="footer-links">
+      <p class="footer-credits">
+        &copy; <span id="current-year"></span> Ethan Davidson. Created with <a
+          href="https://css.fart.tools"
+          class="fart-sparkle"
+        >Fart.css</a> <a
+          class="fart-logo"
+          href="#top"
+          aria-label="Back to top"
+        >🤟</a>
+      </p>
+
+      <nav class="footer-links" aria-label="Social links">
+        <a
+          class="fart-button"
+          href="https://github.com/EthanThatOneKid"
+          target="_blank"
+          rel="noopener"
+        >GitHub</a>
+        <a
+          class="fart-button"
+          href="https://linkedin.com/in/etok"
+          target="_blank"
+          rel="noopener"
+        >LinkedIn</a>
+        <a
+          class="fart-button"
+          href="https://bsky.app/profile/etok.me"
+          target="_blank"
+          rel="noopener"
+        >Bluesky</a>
+        <a
+          class="fart-button"
+          href="https://x.com/etok_me"
+          target="_blank"
+          rel="noopener"
+        >X/Twitter</a>
+      </nav>
+
+      <div class="footer-webrings" aria-label="Webrings">
+        <!-- FartLabs Webring -->
+        <div class="webring-container">
           <a
-            class="fart-button"
-            href="https://github.com/EthanThatOneKid"
-            target="_blank"
-          >GitHub</a>
+            href="https://fartlabs.github.io/webring/"
+            class="webring-btn"
+            title="Previous site"
+            aria-label="Previous site in FartLabs webring"
+          >←</a>
+          <p class="webring-text">
+            <a href="https://fartlabs.github.io/webring/">FartLabs webring</a>
+          </p>
           <a
-            class="fart-button"
-            href="https://linkedin.com/in/etok"
-            target="_blank"
-          >LinkedIn</a>
-          <a
-            class="fart-button"
-            href="https://bsky.app/profile/etok.me"
-            target="_blank"
-          >Bluesky</a>
-          <a
-            class="fart-button"
-            href="https://x.com/etok_me"
-            target="_blank"
-          >X/Twitter</a>
+            href="https://fartlabs.github.io/webring/"
+            class="webring-btn"
+            title="Next site"
+            aria-label="Next site in FartLabs webring"
+          >→</a>
         </div>
-      </div>
 
-      <webring-element src="https://fartlabs.github.io/webring/webring.json" name="Ethan Davidson"></webring-element>
-
-      <div class="webring-container">
-        <!-- Previous Site Link -->
-        <a
-          href="https://webring-1.vercel.app/?from=etok&dir=prev"
-          class="webring-btn"
-          title="Previous site"
-          rel="noopener noreferrer"
-        >
-          <!-- Left Arrow SVG -->
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-        </a>
-
-        <!-- Dynamic Copyright text -->
-        <p class="webring-text">
-          <!-- <a href="https://acmcsuf.com"> -->
-          ACM @ CSUF webring
-          <!-- </a> -->
-        </p>
-
-        <!-- Next Site Link -->
-        <a
-          href="https://webring-1.vercel.app/?from=etok&dir=next"
-          class="webring-btn"
-          title="Next site"
-          rel="noopener noreferrer"
-        >
-          <!-- Right Arrow SVG -->
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </a>
+        <!-- ACM @ CSUF Webring -->
+        <div class="webring-container">
+          <a
+            href="https://webring-1.vercel.app/?from=etok&dir=prev"
+            class="webring-btn"
+            title="Previous site"
+            aria-label="Previous site in ACM @ CSUF webring"
+          >←</a>
+          <p class="webring-text">ACM @ CSUF webring</p>
+          <a
+            href="https://webring-1.vercel.app/?from=etok&dir=next"
+            class="webring-btn"
+            title="Next site"
+            aria-label="Next site in ACM @ CSUF webring"
+          >→</a>
+        </div>
       </div>
     </footer>
 
