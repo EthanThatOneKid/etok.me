@@ -11,6 +11,18 @@ if (import.meta.main) {
   await copy("./lib", `${output}/lib`, { overwrite: true });
   await copy("./assets", `${output}/assets`, { overwrite: true });
 
+  // Copy CNAME if it exists
+  try {
+    await Deno.copyFile("./CNAME", `${output}/CNAME`);
+  } catch (error) {
+    if (!(error instanceof Deno.errors.NotFound)) {
+      throw error;
+    }
+  }
+
+  // Generate .nojekyll
+  await Deno.writeTextFile(`${output}/.nojekyll`, "");
+
   const shortlinks = parse(
     await Deno.readTextFile(new URL(import.meta.resolve("./shortlinks.jsonc"))),
   ) as Record<string, string>;

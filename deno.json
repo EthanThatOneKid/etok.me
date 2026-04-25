@@ -8,7 +8,7 @@
   "tasks": {
     "start": {
       "description": "Start the project",
-      "command": "deno -A jsr:@std/http/file-server",
+      "command": "deno -A jsr:@std/http/file-server static",
       "dependencies": ["generate"]
     },
     "generate": "deno -A main.ts",
