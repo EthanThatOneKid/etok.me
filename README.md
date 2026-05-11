@@ -50,10 +50,10 @@ To update/disable the webring UI, edit the footer markup in `index.html`.
 ### FartLabs webring
 
 This site also participates in the
-[**FartLabs webring**](https://fartlabs.github.io/webring/), shown above the ACM
+[**FartLabs webring**](https://webring.fartlabs.org/), shown above the ACM
 webring in the footer.
 
-Implementation details: <https://fartlabs.github.io/webring/>
+Implementation details: <https://webring.fartlabs.org/>
 
 ---
 
