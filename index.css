@@ -13,7 +13,9 @@
   --transition-normal: 0.3s ease;
 }
 
-nav, .fart-section nav, #top nav {
+nav,
+.fart-section nav,
+#top nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -24,7 +26,10 @@ nav, .fart-section nav, #top nav {
   padding: var(--spacing-md);
 }
 
-.fart-section nav h1, .fart-section nav h1 a, .fart-brand, .fart-brand a {
+.fart-section nav h1,
+.fart-section nav h1 a,
+.fart-brand,
+.fart-brand a {
   margin: 0 !important;
   display: inline-block !important;
   width: auto !important;
