@@ -1,0 +1,291 @@
+.fart-section {
+  max-width: var(--container-content);
+  word-wrap: break-word;
+  margin: var(--space-4xl) auto;
+  padding: 0 var(--space-base);
+
+  @media (min-width: 640px) {
+    padding: 0 var(--space-lg);
+  }
+
+  @media (max-width: 800px) {
+    margin: var(--space-3xl) auto;
+  }
+}
+
+.fart-header {
+  font-family: "Overpass", sans-serif;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--line-height-tight);
+  color: var(--fart-primary);
+}
+
+.fart-inline {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-auto-flow: column;
+  gap: var(--space-xs);
+}
+
+.fart-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background-color: transparent;
+  color: var(--fart-primary);
+  border: 1px solid var(--fart-primary);
+  border-radius: var(--radius-md);
+  padding: 0.125rem var(--space-xs);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  font-family: inherit;
+  line-height: inherit;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+.fart-button,
+.fart-button:is(button, a) {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.fart-button:is(button) {
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .fart-button {
+    padding: 0.125rem var(--space-xs);
+    font-size: var(--font-size-xs);
+  }
+}
+
+.fart-button:hover {
+  background-color: var(--fart-dark-primary);
+  border-color: var(--fart-secondary);
+  color: var(--fart-secondary);
+}
+
+.fart-button:active {
+  background-color: var(--fart-lighter-dark-primary);
+}
+
+.fart-button:focus-visible {
+  outline: 2px solid var(--fart-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-md);
+}
+
+.fart-button:disabled,
+.fart-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  color: var(--fart-off-white);
+  border-color: var(--fart-off-white);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.fart-button:disabled:hover,
+.fart-button:disabled:active,
+.fart-button:disabled:focus,
+.fart-button-disabled:hover,
+.fart-button-disabled:active,
+.fart-button-disabled:focus {
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: transparent;
+  border-color: var(--fart-off-white);
+  color: var(--fart-off-white);
+}
+
+.fart-button:disabled:focus-visible,
+.fart-button-disabled:focus-visible {
+  cursor: not-allowed;
+  pointer-events: none;
+  outline: 2px solid var(--fart-off-white);
+  outline-offset: 3px;
+}
+
+.fart-button-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.fart-button-group .fart-button {
+  border-radius: 0;
+  margin: 0;
+}
+
+.fart-button-group .fart-button:first-child {
+  border-top-left-radius: var(--radius-md);
+  border-bottom-left-radius: var(--radius-md);
+}
+
+.fart-button-group .fart-button:last-child {
+  border-top-right-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+}
+
+.fart-button-group .fart-button:hover {
+  position: relative;
+  z-index: 1;
+}
+
+.fart-topics {
+  margin-top: auto;
+}
+
+.fart-topic {
+  word-break: keep-all;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-full);
+  background-color: var(--fart-lighter-dark-primary);
+  color: var(--fart-primary);
+  display: inline-block;
+  margin: var(--space-xs);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+}
+
+.fart-topic:hover {
+  background-color: var(--fart-dark-primary);
+  border-color: var(--fart-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.fart-logo {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform var(--transition-base);
+}
+
+.fart-logo:hover {
+  animation: fart-shake 560ms var(--ease-in-out);
+  transform: scale(1.1);
+}
+
+.fart-logo:focus-visible {
+  outline: 2px solid var(--fart-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.fart-sparkle::before,
+.fart-sparkle::after {
+  content: var(--fart-sparkle-text);
+}
+
+.fart-sparkle-before::before {
+  content: var(--fart-sparkle-text);
+}
+
+.fart-sparkle-after:after {
+  content: var(--fart-sparkle-text);
+}
+
+.fart-text-gradient {
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--line-height-tight);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    135deg,
+    var(--fart-primary) 0%,
+    var(--fart-secondary) 50%,
+    var(--fart-primary) 100%
+  );
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    background-image: linear-gradient(
+      135deg,
+      var(--fart-primary) 0%,
+      var(--fart-secondary) 100%
+    );
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.fart-text-special {
+  display: inline-block;
+  color: var(--fart-white);
+  border: 1px solid rgba(125, 216, 127, 0.2);
+  background-color: rgba(15, 42, 15, 0.4);
+  border-radius: var(--radius-sm);
+  padding: var(--space-xs) var(--space-sm);
+  margin-right: var(--space-sm);
+  margin-top: var(--space-xs);
+  -webkit-text-fill-color: initial;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--fart-primary);
+  color: var(--fart-darker-dark-primary);
+  padding: var(--space-sm) var(--space-lg);
+  text-decoration: none;
+  z-index: var(--z-tooltip);
+  border-radius: 0 0 var(--radius-md) 0;
+  font-weight: var(--font-weight-bold);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+@media print {
+  :root {
+    --fart-primary: black;
+  }
+
+  @page {
+    margin: 0;
+    size: A4;
+    margin-bottom: 0.5cm;
+    margin-top: 0.5cm;
+    margin-left: 0.5cm;
+    margin-right: 0.5cm;
+  }
+
+  body * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .skip-link {
+    display: none;
+  }
+}

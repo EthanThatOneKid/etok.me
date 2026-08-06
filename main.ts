@@ -10,6 +10,7 @@ if (import.meta.main) {
 
   await copy("./lib", `${output}/lib`, { overwrite: true });
   await copy("./assets", `${output}/assets`, { overwrite: true });
+  await copy("./fartcss", `${output}/fartcss`, { overwrite: true });
 
   // Copy CNAME if it exists
   try {
