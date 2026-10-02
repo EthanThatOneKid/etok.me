@@ -1,9 +1,14 @@
 {
   "lock": false,
   "imports": {
-    "@std/fs": "jsr:@std/fs@^1.0.23",
+    "@std/front-matter": "jsr:@std/front-matter@^1.0.9",
+    "@std/fs": "jsr:@std/fs@^1.0.24",
     "@std/jsonc": "jsr:@std/jsonc@^1.0.2",
-    "@fartlabs/go": "jsr:@fartlabs/go@^0.0.3"
+    "@fartlabs/go": "jsr:@fartlabs/go@^0.0.3",
+    "highlight.js": "npm:highlight.js@^11.12.0",
+    "markdown-it": "npm:markdown-it@^14.3.2",
+    "markdown-it-anchor": "npm:markdown-it-anchor@^9.2.1",
+    "markdown-it-toc-done-right": "npm:markdown-it-toc-done-right@^4.2.0"
   },
   "tasks": {
     "start": {

@@ -58,3 +58,15 @@ Implementation details: <https://webring.fartlabs.org/>
 ---
 
 Programmed with 💖 by [**@EthanThatOneKid**](https://etok.codes/)
+
+
+
+
+
+
+
+
+
+## Blog
+
+This site includes a file-based blog. Posts live in `blog/*.md` with YAML frontmatter and are rendered to `/blog/[slug]/` during `deno task generate`.

@@ -1,1 +1,4 @@
 static
+
+# Blog generated static (if any local artifacts)
+/static
