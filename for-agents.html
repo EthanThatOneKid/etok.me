@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For agents - etok.me</title>
+    <meta
+      name="description"
+      content="Machine-readable front door for etok.me: what the site is, what is on it, and what is deliberately not here yet."
+    />
+    <link rel="canonical" href="https://etok.me/for-agents/" />
+    <link rel="stylesheet" type="text/css" href="/fartcss/fart.css" />
+    <link rel="stylesheet" type="text/css" href="/index.css" />
+    <link rel="icon" href="https://fart.tools/fl-logo.png" />
+  </head>
+  <body>
+    <header style="margin-bottom: 2rem;">
+      <nav><a href="/">Home</a> | <a href="/blog">Blog</a></nav>
+    </header>
+    <main>
+      <h1>For agents</h1>
+
+      <h2>This site has a machine interface.</h2>
+      <p>
+        Most pages here are written for a browser. This page is the
+        machine-readable front door: the same content, in the formats agents
+        already read. It is static files only — there is no API endpoint
+        behind it yet, and nothing here claims otherwise.
+      </p>
+
+      <h2>Discovery</h2>
+      <p>Documents that tell an agent what is here.</p>
+      <ul>
+        <li>
+          <a href="/llms.txt">/llms.txt</a> — what this site is, what is on
+          it, and where to read it. text/plain
+        </li>
+        <li>
+          <a href="/for-agents/">/for-agents/</a> — this page, kept current.
+        </li>
+      </ul>
+
+      <h2>Content</h2>
+      <p>The site, flattened for reading.</p>
+      <ul>
+        <li>
+          <a href="/">Home</a> — Ethan Davidson, software engineer and
+          community builder.
+        </li>
+        <li>
+          <a href="/blog/">Blog</a> — posts by Ethan Davidson. Currently one
+          post:
+          <a href="/blog/hello-world/">Hello World</a> (2026-10-01) —
+          welcome to the new blog on etok.me.
+        </li>
+        <li>
+          <a href="https://ethanthatonekid.github.io/gfmpreview/"
+            >gfmpreview</a
+          >
+          — static JS markdown preview, live on GitHub Pages.
+        </li>
+        <li>
+          Holosuite — prompt-to-playable-program holodeck (Cal Hacks 12
+          origin; v1 rebuild in progress, not yet live).
+        </li>
+      </ul>
+
+      <h2>Policy</h2>
+      <p>What crawlers and models may do with it.</p>
+      <ul>
+        <li>
+          Public content on this site may be read, summarized, and cited.
+          Nothing here is behind a credential, so do not probe for a login.
+        </li>
+      </ul>
+
+      <h2>What is deliberately missing</h2>
+      <p>Knowing which standards do not apply is part of implementing them.</p>
+      <ul>
+        <li>
+          There is no MCP endpoint, no JSON-RPC tool list, no linkset, and
+          no agent-identity document — because this site serves none of
+          those yet. A tool list with no tool behind it is worse than none.
+        </li>
+        <li>
+          There are no per-page Markdown twins. The generator does not
+          produce them yet.
+        </li>
+        <li>
+          There are no user accounts and no credentials are issued. There
+          is no commerce surface either — nothing here is for sale to a
+          machine.
+        </li>
+      </ul>
+      <p>
+        Planned, not live: a real read-only endpoint (for example a
+        projects list) will be listed here only once it is actually served.
+      </p>
+    </main>
+  </body>
+</html>

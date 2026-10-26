@@ -13,6 +13,9 @@ if (import.meta.main) {
   await Deno.mkdir(output, { recursive: true });
   await Deno.copyFile("./index.html", output + "/index.html");
   await Deno.copyFile("./index.css", output + "/index.css");
+  await Deno.mkdir(output + "/for-agents", { recursive: true });
+  await Deno.copyFile("./for-agents.html", output + "/for-agents/index.html");
+  await Deno.copyFile("./llms.txt", output + "/llms.txt");
 
   await copy("./lib", output + "/lib", { overwrite: true });
   await copy("./assets", output + "/assets", { overwrite: true });

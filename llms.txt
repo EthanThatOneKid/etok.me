@@ -1,0 +1,18 @@
+# etok.me
+
+> Personal site of Ethan Davidson (EthanThatOneKid): software engineer, music-production educator, and community builder.
+
+## Pages
+
+- [Home](https://etok.me/): Ethan Davidson, software engineer and community builder.
+- [Blog](https://etok.me/blog/): Posts by Ethan Davidson.
+- [Hello World](https://etok.me/blog/hello-world/) (2026-10-01): Welcome to the new blog on etok.me.
+
+## Projects
+
+- [gfmpreview](https://ethanthatonekid.github.io/gfmpreview): Static JS markdown preview, live on GitHub Pages.
+- Holosuite: Prompt-to-playable-program holodeck (Cal Hacks 12 origin; v1 rebuild in progress, not yet live).
+
+## Machine interface
+
+- [For agents](https://etok.me/for-agents/): Machine-readable front door for this site. Static files only; no API endpoint yet, no user accounts, no credentials, no commerce surface.
