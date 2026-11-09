@@ -1,3 +1,5 @@
+import type { Post } from "./blog/posts.ts";
+
 export interface SitemapEntry {
   loc: string;
   lastmod?: string;
@@ -6,6 +8,19 @@ export interface SitemapEntry {
 
 export function robotsTxt(sitemapURL: string): string {
   return `User-agent: *\nAllow: /\n\nSitemap: ${sitemapURL}\n`;
+}
+
+export function sitemapEntries(posts: Post[]): SitemapEntry[] {
+  return [
+    { loc: "https://etok.me/", priority: "1.0" },
+    { loc: "https://etok.me/blog/", priority: "0.8" },
+    ...posts.map((post) => ({
+      loc: `https://etok.me/blog/${post.id}/`,
+      lastmod: post.attrs.date.toISOString().split("T")[0],
+      priority: "0.7",
+    })),
+    { loc: "https://etok.me/for-agents/", priority: "0.5" },
+  ];
 }
 
 export function sitemapXML(entries: SitemapEntry[]): string {
