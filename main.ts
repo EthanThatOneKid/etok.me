@@ -44,6 +44,56 @@ if (import.meta.main) {
     );
   }
 
+  // GitHub Pages serves this file for any path that does not match a static
+  // asset. Resolve shortlink subpaths here, e.g. /codes/etok.me.
+  await Deno.writeTextFile(
+    output + "/404.html",
+    `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting... - etok.me</title>
+    <script id="shortlinks" type="application/json">
+${JSON.stringify(shortlinks, null, 2)}
+    </script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@fartlabs/go": "https://esm.sh/jsr/@fartlabs/go@0.0.3"
+        }
+      }
+    </script>
+    <script type="module">
+      import { go } from "@fartlabs/go";
+      const shortlinks = JSON.parse(
+        document.getElementById("shortlinks").textContent,
+      );
+      const destination = go(new URL(location.href), shortlinks);
+      if (destination.href !== location.href) {
+        location.replace(destination.href);
+      } else {
+        document.getElementById("redirecting").hidden = true;
+        document.getElementById("not-found").hidden = false;
+      }
+    </script>
+  </head>
+  <body style="font-family: system-ui; text-align: center; padding: 2rem;">
+    <div id="redirecting"><p>Redirecting...</p></div>
+    <div id="not-found" hidden>
+      <h1>404 Not Found</h1>
+      <p>The page you are looking for does not exist.</p>
+      <a href="/">Go to the home page</a>
+    </div>
+    <noscript>
+      <h1>404 Not Found</h1>
+      <p>The page you are looking for does not exist.</p>
+      <a href="/">Go to the home page</a>
+    </noscript>
+  </body>
+</html>`,
+  );
+
   const posts = await readPosts();
   await Deno.mkdir(output + "/blog", { recursive: true });
   await Deno.writeTextFile(output + "/blog/blog.css", blogCSS());
