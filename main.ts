@@ -1,6 +1,6 @@
 import { readPosts } from "./lib/blog/posts.ts";
 import { blogCSS } from "./lib/blog/css.ts";
-import { robotsTxt, sitemapXML, type SitemapEntry } from "./lib/seo.ts";
+import { robotsTxt, sitemapEntries, sitemapXML } from "./lib/seo.ts";
 import { copy } from "@std/fs/copy";
 import { go } from "@fartlabs/go";
 import { parse } from "@std/jsonc";
@@ -120,19 +120,12 @@ ${JSON.stringify(shortlinks, null, 2)}
     );
   }
 
-  const sitemapEntries: SitemapEntry[] = [
-    { loc: "https://etok.me/", priority: "1.0" },
-    { loc: "https://etok.me/blog/", priority: "0.8" },
-    ...posts.map((post) => ({
-      loc: "https://etok.me/blog/" + post.id + "/",
-      lastmod: post.attrs.date.toISOString().split("T")[0],
-      priority: "0.7",
-    })),
-    { loc: "https://etok.me/for-agents/", priority: "0.5" },
-  ];
   await Deno.writeTextFile(
     output + "/robots.txt",
     robotsTxt("https://etok.me/sitemap.xml"),
   );
-  await Deno.writeTextFile(output + "/sitemap.xml", sitemapXML(sitemapEntries));
+  await Deno.writeTextFile(
+    output + "/sitemap.xml",
+    sitemapXML(sitemapEntries(posts)),
+  );
 }
