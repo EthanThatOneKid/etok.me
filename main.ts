@@ -61,7 +61,7 @@ ${JSON.stringify(shortlinks, null, 2)}
     <script type="importmap">
       {
         "imports": {
-          "@fartlabs/go": "https://esm.sh/jsr/@fartlabs/go@0.0.3"
+          "@fartlabs/go": "https://esm.sh/jsr/@fartlabs/go@0.0.4"
         }
       }
     </script>
