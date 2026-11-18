@@ -6,7 +6,7 @@
     "@std/fs": "jsr:@std/fs@^1.0.24",
     "@std/jsonc": "jsr:@std/jsonc@^1.0.2",
     "@std/xml": "jsr:@std/xml@^0.2.0",
-    "@fartlabs/go": "jsr:@fartlabs/go@^0.0.4",
+    "@fartlabs/go": "jsr:@fartlabs/go@0.0.4",
     "highlight.js": "npm:highlight.js@^11.12.0",
     "markdown-it": "npm:markdown-it@^14.3.2",
     "markdown-it-anchor": "npm:markdown-it-anchor@^9.2.1",
